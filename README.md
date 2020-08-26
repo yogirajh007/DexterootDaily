@@ -1,1 +1,1 @@
-https://articles.dexteroo.ml - Web Application
+https://articles.dexteroot.ml - Web Application
