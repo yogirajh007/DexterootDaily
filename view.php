@@ -12,7 +12,7 @@ ini_set('display_errors', '1');
 $id = $_GET['id'];
 $inc = "UPDATE ARTICLES SET Views = Views + 1 WHERE id = $id";
 $sql = "SELECT * FROM ARTICLES WHERE id = $id";
-$conn = mysqli_connect("localhost", "dexter", "dextersql@123", "articles");
+$conn = mysqli_connect("localhost", "dexterweb", "dExtersql@123", "articles");
 $incr = mysqli_query($conn,$inc);
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_row($result);
@@ -30,7 +30,7 @@ $row = mysqli_fetch_row($result);
 	<div class="header">
 
 	<h1><?php echo $row[2]?></h1>
-	<span class="author"><?php echo $row[3]?>&bull; <?php echo $row[1];?>&bull; <a href="index.php">Home</a>&bull; <?php echo $row[4]?> Views</span>
+	<span class="author"><?php echo $row[3]?> &bull; <?php echo $row[1];?> &bull; <a href="index.php"> Home </a>&bull; <?php echo $row[4]?> Views</span>
 	</div>
 	<div class="body">
 <br>

@@ -18,14 +18,14 @@ ini_set('display_errors', '1');
 
 $da = date("Y-m-d");
 $sql1 = "select DISTINCT(AUTHOR) from ARTICLES";
-$conn1 = mysqli_connect("localhost", "dexter", "dextersql@123", "articles");
+$conn1 = mysqli_connect("localhost", "dexterweb", "dExtersql@123", "articles");
 $result1 = mysqli_query($conn1,$sql1);
 
 
 
 ?>
 	<h1><?php echo "Archives";?></h1>
-	<span class="author">Admin &bull; <?php echo date("d-F-Y");?>&bull; <a href="index.php">Home</a></span>
+	<span class="author">Admin &bull; <?php echo date("d-F-Y");?>&bull;  <a href="index.php"> Home</a></span>
 	</div>
 	<div class="body" style="font-size: large;">
 <br>
@@ -55,7 +55,7 @@ if(isset($_GET['Date']))
 {
 $da =  $_GET['Date'];
 $sql = "select * from articles.ARTICLES WHERE DATE(Date_Added) = '$da' ";
-$conn = mysqli_connect("localhost", "dexter", "dextersql@123", "articles");
+$conn = mysqli_connect("localhost", "dexterweb", "dExtersql@123", "articles");
 $result = mysqli_query($conn,$sql);
 while($row = mysqli_fetch_row($result))
 {
@@ -66,7 +66,7 @@ if(isset($_GET['Author']))
 {
 $da =  $_GET['Author'];
 $sql = "select * from articles.ARTICLES WHERE AUTHOR  = '$da' ";
-$conn = mysqli_connect("localhost", "dexter", "dextersql@123", "articles");
+$conn = mysqli_connect("localhost", "dexterweb", "dExtersql@123", "articles");
 $result = mysqli_query($conn,$sql);
 while($row = mysqli_fetch_row($result))
 {
